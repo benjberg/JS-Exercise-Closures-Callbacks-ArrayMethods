@@ -291,17 +291,18 @@ function counterMaker() {
  * etc
 */
 function counterMakerWithLimit(max) {
-  let count = 0;
+  let count = -1;
   return function(){
    
-   if(count === max){
-     count = 0;
+   if(count >= max){
+     count=0;
    } else{
-     return count++
+     count++
    }
+   return count
   }
 }
-
+console.log(counterMakerWithLimit(3));
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
